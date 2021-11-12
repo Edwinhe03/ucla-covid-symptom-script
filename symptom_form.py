@@ -5,15 +5,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import getpass
 import time
 
-def resource_path(relative_path):
-    try:
-        base_path = sys._MEIPASS
-    except Exception:
-        base_path = os.path.dirname(__file__)
-    return os.path.join(base_path, relative_path)
-
 def run(user, pw):
-    driver = webdriver.Chrome(resource_path('./driver/chromedriver'))
+    driver = webdriver.Chrome('./driver/chromedriver')
     driver.get("https://uclasurveys.co1.qualtrics.com/jfe/form/SV_3qRLtouCYKzBbH7")
 
     try: 
