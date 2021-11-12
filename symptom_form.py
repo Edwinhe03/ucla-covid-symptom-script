@@ -1,14 +1,23 @@
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import platform
 import getpass
 import time
 
-def run(user, pw):
-    driver = webdriver.Chrome('./driver/chromedriver')
-    driver.get("https://uclasurveys.co1.qualtrics.com/jfe/form/SV_3qRLtouCYKzBbH7")
+def path():
+    p = platform.system()
+    if p == "Windows":
+        return './driver/chromedriver.exe'
+    else:
+        return './driver/chromedriver'
 
+def run(user, pw):
+    s = Service(path())
+    driver = webdriver.Chrome(service=s)
+    driver.get("https://uclasurveys.co1.qualtrics.com/jfe/form/SV_3qRLtouCYKzBbH7")
     try: 
         element = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.ID, "QID3-2-label"))
@@ -110,4 +119,5 @@ def run(user, pw):
 user = input("Enter username: ")
 pw = getpass.getpass("Enter password: ")
 print("*** Be ready to authenticate login on DUO Mobile ***")
+time.sleep(2)
 run(user, pw)
