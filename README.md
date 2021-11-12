@@ -20,9 +20,8 @@ To use:
 - Enter your UCLA Logon username and password as prompted
 - Have the DUO Mobile app ready to authenticate the logon
 
-* For Windows users, replace any instance of "python3" with "py".
-
 NOTES:
+- For Windows users, replace any instance of "python3" with "py".
 - There are no checks for errors or exceptions, so you must enter you credentials correctly
 - Your credentials will not be saved
 - You must be connected to the internet or mobile data to complete the form
