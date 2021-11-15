@@ -2,7 +2,7 @@
 The script will fill out the UCLA Daily Symptom Survey automatically, assuming you are healthy and have no symptoms of COVID-19.
 
 Prerequisites:
-- Have Google Chrome installed (currently works on Chrome version 96)
+- Have Google Chrome installed (currently works on Chrome version 96; update instructions below)
 - On a Command Line, check that Python 3 is installed by running:
   - python3 --version
 - If not, you can install Python 3 from https://www.python.org/downloads/
@@ -23,8 +23,11 @@ To use:
 
 NOTES:
 - For Windows users, replace any instance of "python3" with "py".
+- On first use, Mac users may see the message: "'chromedriver' cannot be opened because the developer cannot be verified."
+  - Go to System Preferences > Security & Privacy > General, and click "Allow Anyway"
+  - Run the program again, and click "Open" when prompted
 - There are no checks for errors or exceptions, so you must enter you credentials correctly
 - Your credentials will not be saved
 - You must be connected to the internet or mobile data to complete the form
 - If Google Chrome updates to a new version, go to https://chromedriver.chromium.org/downloads and download the latest release of ChromeDriver
-  - In the ./driver directory, replace "chromedriver" (Mac) or "chromedriver.exe" (Windows) with the new unzipped executable 
+  - In the ./driver directory, replace only "chromedriver" (Mac) or "chromedriver.exe" (Windows) with the new unzipped executable 
