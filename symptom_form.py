@@ -55,65 +55,48 @@ def run(user, pw):
         )
         element.click()
 
-        element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "NextButton"))
-        )
+        driver.implicitly_wait(5)
+
+        driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
+        element = driver.find_element(By.ID, "NextButton")
         element.click()
 
-        element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "QID221-15-label"))
-        )
-        element.click()
-        element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "NextButton"))
-        )
-        element.click()
-
-        element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "NextButton"))
-        )
-        element.click()
-
-        element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "NextButton"))
-        )
-        element.click()
-
-        element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "NextButton"))
-        )
-        element.click()
-
-        time.sleep(2)
         
-        element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "QID2-1-label"))
-        )
-        element.click()
-        element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "NextButton"))
-        )
+        driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
+        element = driver.find_element(By.ID, "NextButton")
         element.click()
 
-        element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "QID3-2-label"))
-        )
+        driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
+        element = driver.find_element(By.ID, "QID239-12-label")
         element.click()
-        element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "NextButton"))
-        )
+        element = driver.find_element(By.ID, "NextButton")
         element.click()
-     
-        element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "QID12-2-label"))
-        )
+
+        driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
+        element = driver.find_element(By.ID, "QID207-4-label")
         element.click()
-        element = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.ID, "NextButton"))
-        )
+        element = driver.find_element(By.ID, "NextButton")
+        element.click()
+
+        driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")        
+        element = driver.find_element(By.ID, "QID2-1-label")
+        element.click()
+        element = driver.find_element(By.ID, "NextButton")
+        element.click()
+
+        driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
+        element = driver.find_element(By.ID, "QID12-2-label")
+        element.click()
+        element = driver.find_element(By.ID, "NextButton")
+        element.click()
+
+        driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
+        element = driver.find_element(By.ID, "QID3-2-label")
+        element.click()
+        element = driver.find_element(By.ID, "NextButton")
         element.click()
     finally:
-        time.sleep(10)
+        time.sleep(5)
         driver.quit()
 
 user = input("Enter username: ")
