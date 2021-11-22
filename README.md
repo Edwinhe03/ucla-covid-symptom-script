@@ -30,4 +30,4 @@ NOTES:
 - Your credentials will not be saved
 - You must be connected to the internet or mobile data to complete the form
 - If Google Chrome updates to a new version, go to https://chromedriver.chromium.org/downloads and download the latest release of ChromeDriver
-  - In the ./driver directory, replace only "chromedriver" (Mac) or "chromedriver.exe" (Windows) with the new unzipped executable 
+  - In the ./driver/(OS Type)/ directory, replace the "chromedriver" file with the new unzipped executable 

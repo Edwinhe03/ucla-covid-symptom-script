@@ -10,9 +10,9 @@ import time
 def path():
     p = platform.system()
     if p == "Windows":
-        return './driver/chromedriver.exe'
+        return './driver/Windows/chromedriver.exe'
     else:
-        return './driver/chromedriver'
+        return './driver/Mac/chromedriver'
 
 def run(user, pw):
     s = Service(path())
