@@ -61,16 +61,15 @@ def run(user, pw):
         element = driver.find_element(By.ID, "NextButton")
         element.click()
 
+        driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
+        element = driver.find_element(By.ID, "QID215-2-label")
+        element.click()
+        element = driver.find_element(By.ID, "NextButton")
+        element.click()
         
-        driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
-        element = driver.find_element(By.ID, "NextButton")
-        element.click()
-
-        driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
-        element = driver.find_element(By.ID, "QID239-12-label")
-        element.click()
-        element = driver.find_element(By.ID, "NextButton")
-        element.click()
+        #driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
+        #element = driver.find_element(By.ID, "NextButton")
+        #element.click()
 
         driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
         element = driver.find_element(By.ID, "QID207-4-label")
