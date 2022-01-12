@@ -58,6 +58,8 @@ def run(user, pw):
         driver.implicitly_wait(5)
 
         driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
+        tested = "You have met surveillance testing requirements." in driver.page_source
+
         element = driver.find_element(By.ID, "NextButton")
         element.click()
 
@@ -85,11 +87,12 @@ def run(user, pw):
         element = driver.find_element(By.ID, "NextButton")
         element.click()
 
-        driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
-        element = driver.find_element(By.ID, "QID192-1-label")
-        element.click()
-        element = driver.find_element(By.ID, "NextButton")
-        element.click()
+        if not tested:
+            driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
+            element = driver.find_element(By.ID, "QID192-1-label")
+            element.click()
+            element = driver.find_element(By.ID, "NextButton")
+            element.click()
 
         driver.find_element(By.CSS_SELECTOR, "form[data-testid='page-ready']")
         element = driver.find_element(By.ID, "QID3-2-label")
